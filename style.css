@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'DM Sans', sans-serif;
 }
 
 html, body {
@@ -12,25 +12,25 @@ html, body {
   overflow-y: auto;
 }
 
-/* Background: gradient behind video (visible if video fails to load) */
+/* Background container */
 .background {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  background-color: #1a1a2e;
   z-index: -1;
 }
 
-/* Video background */
-#bg-video {
+.background-img {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
   z-index: -1;
 }
 
@@ -62,22 +62,22 @@ html, body {
   margin: 0 auto;
 }
 
-/* Headline – fluid scale so it fits all viewports */
+/* Headline – smaller, fluid scale */
 .overlay h1 {
-  font-size: clamp(1.65rem, 5.5vw + 1rem, 3rem);
+  font-size: clamp(1.35rem, 4vw + 0.8rem, 2.25rem);
   font-weight: 700;
-  margin-bottom: clamp(0.6rem, 2vw, 1rem);
+  margin-bottom: clamp(0.5rem, 1.5vw, 0.75rem);
   text-shadow: 1px 1px 8px rgba(0,0,0,0.4);
   opacity: 0;
   transform: translateY(20px);
   animation: fadeUp 1.4s ease-out 0.4s forwards;
 }
 
-/* Subtext – fluid scale so it fits */
+/* Subtext – smaller */
 .overlay p {
-  font-size: clamp(0.9rem, 2.2vw + 0.6rem, 1.1rem);
-  line-height: 1.6;
-  margin-bottom: clamp(0.5rem, 1.5vw, 0.9rem);
+  font-size: clamp(0.8rem, 1.8vw + 0.45rem, 0.95rem);
+  line-height: 1.55;
+  margin-bottom: clamp(0.4rem, 1.2vw, 0.65rem);
   text-shadow: 1px 1px 6px rgba(0,0,0,0.3);
   opacity: 0;
   transform: translateY(20px);
@@ -119,7 +119,7 @@ html, body {
   text-decoration: none;
   padding: clamp(12px, 2.5vw, 14px) clamp(18px, 4vw, 22px);
   border-radius: 50px;
-  font-size: clamp(0.9rem, 1.8vw + 0.5rem, 1rem);
+  font-size: clamp(0.8rem, 1.5vw + 0.4rem, 0.9rem);
   font-weight: 600;
   transition: all 0.3s ease;
   display: inline-flex;
@@ -137,7 +137,7 @@ html, body {
 
 /* Icons – mobile-friendly size, scale with viewport */
 .btn i {
-  font-size: clamp(0.95rem, 2vw + 0.5rem, 1.15rem);
+  font-size: clamp(0.8rem, 1.5vw + 0.4rem, 0.95rem);
   flex-shrink: 0;
 }
 
